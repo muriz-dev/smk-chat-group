@@ -22,14 +22,14 @@ if ($data) {
     $_SESSION['tanggal_daftar'] = date_format(date_create($data['tanggal_daftar']), 'd/m/Y');
     $_SESSION['link'] = $data['link'];
 
-    header('Location: ../result.php');
+    header('Location: ../index.php');
 } else {
     session_destroy();
 
     echo "
         <script>
             alert('Data peserta didik tidak ditemukan, periksa kembali nomor pendaftaran.');
-            window.location = '../index.php';
+            window.location = '../login.php';
         </script>
     ";
 }
